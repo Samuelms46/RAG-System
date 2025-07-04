@@ -5,19 +5,20 @@ from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 from langchain_core.documents import Document
 from datetime import datetime
 import chromadb
+import os
 from langchain_openai import AzureOpenAIEmbeddings
 
-config = load_dotenv(".env")
+load_dotenv(".env")
 embeddings = AzureOpenAIEmbeddings(
     model="text-embedding-3-small",
-    azure_endpoint=config["AZURE_EMBEDDING_ENDPOINT"],
-    api_key=config["AZURE_EMBEDDING_API_KEY"],
+    azure_endpoint=os.getenv("AZURE_EMBEDDING_ENDPOINT"),
+    api_key=os.getenv("AZURE_EMBEDDING_API_KEY"),
 )
 
 ef = embeddings.embed_documents
 st.title("RAG chat app")
 
-groq_api_key = config["GROQ_API_KEY"]
+groq_api_key = os.getenv("GROQ_API_KEY")
 
 client = chromadb.HttpClient(host="localhost", port=8765)
 if not (ret := client.heartbeat()):
@@ -40,7 +41,7 @@ if "file_path" not in st.session_state:
 
 if "llm" not in st.session_state:
     llm = ChatGroq(
-        model=config["GROQ_MODEL"],
+        model=os.getenv("GROQ_MODEL"),
         api_key=groq_api_key,
         temperature=0.7,
         # max_tokens=40,
