@@ -28,7 +28,7 @@ else:
     st.write(f"Chroma time: {datetime.fromtimestamp(int(ret / 1e9))}")
 
 
-collection = client.get_or_create_collection("EON_local")
+collection = client.get_or_create_collection("EON-Reality_local")
 
 
 system_message = SystemMessage(
