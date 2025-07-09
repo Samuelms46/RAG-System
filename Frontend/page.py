@@ -20,7 +20,7 @@ st.title("RAG chat app")
 
 groq_api_key = os.getenv("GROQ_API_KEY")
 
-client = chromadb.HttpClient(host="localhost", port=8765)
+client = chromadb.HttpClient(host="chroma", port=8000)
 if not (ret := client.heartbeat()):
     st.error("Chroma server is down")
     st.stop()

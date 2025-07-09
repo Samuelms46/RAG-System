@@ -1,0 +1,5 @@
+streamlit
+langchain-groq
+python-dotenv
+chunking-evaluation @ git+https://github.com/brandonstarxel/chunking_evaluation.git
+langchain_openai 
