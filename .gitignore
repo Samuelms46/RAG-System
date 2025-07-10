@@ -6,7 +6,6 @@ dist/
 
 # Virtual environments
 .env
-venv/
+venv/ 
 
 chroma_db/
-
