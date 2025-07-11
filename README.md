@@ -54,9 +54,8 @@ streamlit run Frontend/page.py
 RAG-System/
 ├── Frontend/
 │   └── page.py              # Streamlit UI and main application logic
-├── data/                    # Document storage and processed data
+├── data/                # Document storage and processed data
 ├── rag_pipeline.ipynb/      # Jupyter notebook for experimentation
-├── tests/                   # Test files will be done
 ├── requirements.txt         # Python dependencies
 └── README.md               # Project documentation
 ```
@@ -157,6 +156,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - ChromaDB for vector storage capabilities
 - Streamlit for the intuitive UI framework
 - LangChain for RAG pipeline components
+- EON Reality White paper used in this project
 
 ## 📞 Contact
 
