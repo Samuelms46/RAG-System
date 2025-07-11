@@ -18,9 +18,6 @@ A Retrieval-Augmented Generation (RAG) system built during the AFTA bootcamp, fe
 - Streamlit
 - ChromaDB
 - LangChain
-- Transformers
-- NumPy
-- Pandas
 
 ## 🛠️ Installation
 
